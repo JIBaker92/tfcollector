@@ -18,12 +18,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::post('/register', 'Auth/RegisterController@create');
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
+Route::resource('series', 'SeriesController');
+Route::post('/series/create', 'SeriesController@store')->name('StoreSeries');
 Route::get('/home', 'HomeController@index')->name('home');
