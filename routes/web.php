@@ -20,9 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/', function() {
-        return redirect()->route('home');
-    });
     Route::resource('series', 'SeriesController');
     Route::post('/series/create', 'SeriesController@store')->name('StoreSeries');
     Route::get('/home', 'HomeController@index')->name('home');
