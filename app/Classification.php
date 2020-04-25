@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App;
 
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
 
-class ClassController extends Controller
+class Classification extends Model
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

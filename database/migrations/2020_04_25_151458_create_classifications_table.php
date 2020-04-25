@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ClassTable extends Migration
+class CreateClassificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class ClassTable extends Migration
      */
     public function up()
     {
-        Schema::create('class', function (Blueprint $table) {
+        Schema::create('classifications', function (Blueprint $table) {
             $table->id();
-            $table->string('class_name');
+            $table->string('classification_name');
             $table->dateTime('updated_at');
             $table->dateTime('created_at');
         });
@@ -28,6 +28,6 @@ class ClassTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('classifications');
     }
 }
