@@ -35,7 +35,16 @@
                     
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Series') }}">{{ __('Series') }}</a>
+                                <a class="nav-link" href="{{ url('/series') }}">{{ __('Series') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/characters') }}">{{ __('Characters') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/classification') }}">{{ __('Classification') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/faction') }}">{{ __('Faction') }}</a>
                             </li>
                     </ul>
 
