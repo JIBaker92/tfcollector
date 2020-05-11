@@ -22,8 +22,6 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function() {
     Route::resource('series', 'SeriesController');
     Route::post('/series/create', 'SeriesController@store')->name('StoreSeries');
-    Route::resource('characters', 'CharactersController');
-    Route::post('/characters/create', 'CharactersController@store')->name('StoreCharacters');
     Route::get('/home', 'HomeController@index')->name('home');
 
 });

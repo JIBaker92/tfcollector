@@ -18,8 +18,8 @@ class CharactersTable extends Migration
             $table->unsignedBigInteger('title_id');
             $table->foreign('title_id')->references('id')->on('series');
             $table->string('description');
-            $table->unsignedBigInteger('classification_id');
-            $table->foreign('classification_id')->references('id')->on('classification');
+            $table->unsignedBigInteger('class_id');
+            $table->foreign('class_id')->references('id')->on('class');
             $table->string('picture_link')->nullable(true);
             $table->unsignedBigInteger('faction_id');
             $table->foreign('faction_id')->references('id')->on('faction');
