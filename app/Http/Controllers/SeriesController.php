@@ -14,7 +14,9 @@ class SeriesController extends Controller
      */
     public function index()
     {
-        return view('series');
+        $series = Series::all()->toArray();
+        return view('series', compact ('series'));
+        
     }
 
     /**
@@ -36,6 +38,7 @@ class SeriesController extends Controller
     public function store(Request $request)
     {   $this->validate($request, [
         'title' => 'required',
+        'year' => 'required|numeric'
     ]);
         $series = new Series([
             'title' => $request->get('title'),
@@ -43,7 +46,7 @@ class SeriesController extends Controller
             'type' => $request->get('type')
         ]);
         $series->save();
-        return redirect()->route('series')->with('success','Series was successfully added');
+        return redirect()->route('series.create')->with('success','Series was successfully added');
     }
 
     /**
