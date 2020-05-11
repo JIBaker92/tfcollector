@@ -24,6 +24,10 @@
                 height: 100vh;
             }
 
+            .top-height{
+                height: 85vh;
+            }
+
             .flex-center {
                 align-items: center;
                 display: flex;
@@ -37,6 +41,12 @@
             .top-right {
                 position: absolute;
                 right: 10px;
+                top: 18px;
+            }
+
+            .top-left {
+                position: absolute;
+                left: 10px;
                 top: 18px;
             }
 
@@ -61,6 +71,12 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .text{
+                position: absolute;
+                left: 10px;
+            }
+
         </style>
     </head>
     <body>
@@ -78,21 +94,19 @@
                     @endauth
                 </div>
             @endif
+            <div class="top-left links">
+            <a href="{{ url('series/create') }}">Series</a>
+            <a href="{{ url('characters/create') }}">Characters</a>
+            <a href="{{ url('classification/create') }}">Classification</a>
+            <a href="{{ url('faction/create') }}">Faction</a>
+            </div>
 
             <div class="content">
-                <div class="title m-b-md">
-                    Characters
-                </div>
+            <div class="content positiion-ref top-height">
+                <div class="main content text">
+                <p>Here are the current characters that have been added.</p>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <p>Add a new character?</p>
                 </div>
             </div>
         </div>

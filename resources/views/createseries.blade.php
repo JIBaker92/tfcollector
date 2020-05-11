@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Create Series</title>
+        <title>Series</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -18,6 +18,11 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+            }
+
+            .nav {
+                background: #6B059D;
+                color: #7745BA;
             }
 
             .full-height {
@@ -94,15 +99,17 @@
                     @endauth
                 </div>
             @endif
-
+            <div class="top-left links">
+            <a href="{{ url('series/create') }}">Series</a>
+            <a href="{{ url('characters/create') }}">Characters</a>
+            <a href="{{ url('classification/create') }}">Classification</a>
+            <a href="{{ url('faction/create') }}">Faction</a>
+            </div>
             <div class="content positiion-ref top-height">
-                <div class="title m-b-md">
-                    Create Series
-                </div>
                 <div class="main content text">
                 <p>Here are the current series that have been added.</p>
 
-                <p>Add a new series</p>
+                <p>Add a new series?</p>
                 </div>
             </div>
         </div>
