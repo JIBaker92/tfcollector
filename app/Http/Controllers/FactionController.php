@@ -13,7 +13,7 @@ class FactionController extends Controller
      */
     public function index()
     {
-        //
+        return view('faction');
     }
 
     /**
@@ -23,7 +23,7 @@ class FactionController extends Controller
      */
     public function create()
     {
-        //
+        return view('createfaction');
     }
 
     /**

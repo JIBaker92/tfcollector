@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Create Series</title>
+        <title>Create Faction</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -24,10 +24,6 @@
                 height: 100vh;
             }
 
-            .top-height{
-                height: 85vh;
-            }
-
             .flex-center {
                 align-items: center;
                 display: flex;
@@ -41,12 +37,6 @@
             .top-right {
                 position: absolute;
                 right: 10px;
-                top: 18px;
-            }
-
-            .top-left {
-                position: absolute;
-                left: 10px;
                 top: 18px;
             }
 
@@ -71,12 +61,6 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-
-            .text{
-                position: absolute;
-                left: 10px;
-            }
-
         </style>
     </head>
     <body>
@@ -95,14 +79,20 @@
                 </div>
             @endif
 
-            <div class="content positiion-ref top-height">
+            <div class="content">
                 <div class="title m-b-md">
-                    Create Series
+                    Faction
                 </div>
-                <div class="main content text">
-                <p>Here are the current series that have been added.</p>
 
-                <p>Add a new series</p>
+                <div class="links">
+                    <a href="https://laravel.com/docs">Docs</a>
+                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://blog.laravel.com">Blog</a>
+                    <a href="https://nova.laravel.com">Nova</a>
+                    <a href="https://forge.laravel.com">Forge</a>
+                    <a href="https://vapor.laravel.com">Vapor</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
         </div>

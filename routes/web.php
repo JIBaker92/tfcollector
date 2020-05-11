@@ -23,7 +23,11 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('series', 'SeriesController');
     Route::post('/series/create', 'SeriesController@store')->name('StoreSeries');
     Route::resource('characters', 'CharactersController');
-    Route::post('/characters/create', 'CharactersController@store')->name('StoreCharacters');
+    Route::post('/characters/create', 'CharactersController@create')->name('CreateCharacters');
+    Route::resource('classification', 'ClassificationController');
+    Route::post('/classification/create', 'ClassificationController@create')->name('CreateClassification');
+    Route::resource('faction', 'FactionController');
+    Route::post('/faction/create', 'FactionController@create')->name('CreateFaction');
     Route::get('/home', 'HomeController@index')->name('home');
 
 });
