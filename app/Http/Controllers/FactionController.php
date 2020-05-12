@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Faction;
 
 class FactionController extends Controller
 {
@@ -13,7 +14,8 @@ class FactionController extends Controller
      */
     public function index()
     {
-        return view('faction');
+        $faction = Faction::all()->toArray();
+        return view('faction', compact ('faction'));
     }
 
     /**
@@ -34,7 +36,15 @@ class FactionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        {   $this->validate($request, [
+            'faction_name' => 'required',
+        ]);
+            $faction = new Faction([
+                'faction_name' => $request->get('faction_name')
+            ]);
+            $faction->save();
+            return redirect()->route('CreateFaction')->with('success','Faction was successfully added');
+        }
     }
 
     /**

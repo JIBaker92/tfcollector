@@ -46,7 +46,7 @@ class SeriesController extends Controller
             'type' => $request->get('type')
         ]);
         $series->save();
-        return redirect()->route('series.create')->with('success','Series was successfully added');
+        return redirect()->route('createseries')->with('success','Series was successfully added');
     }
 
     /**

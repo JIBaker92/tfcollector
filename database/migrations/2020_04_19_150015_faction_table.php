@@ -13,7 +13,7 @@ class FactionTable extends Migration
      */
     public function up()
     {
-        Schema::create('faction', function (Blueprint $table) {
+        Schema::create('factions', function (Blueprint $table) {
             $table->id();
             $table->string('faction_name');
             $table->dateTime('updated_at');

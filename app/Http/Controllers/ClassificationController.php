@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Classification;
 
 class ClassificationController extends Controller
 {
@@ -13,7 +14,8 @@ class ClassificationController extends Controller
      */
     public function index()
     {
-        return view('classification');
+        $classification = Classification::all()->toArray();
+        return view('classification', compact ('classification'));
     }
 
     /**
@@ -34,7 +36,14 @@ class ClassificationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'class_name' => 'required',
+        ]);
+            $classification = new Classification([
+                'class_name' => $request->get('class_name')
+            ]);
+            $classification->save();
+            return redirect()->route('createclassification')->with('success','Class was successfully added');
     }
 
     /**

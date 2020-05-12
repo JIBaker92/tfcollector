@@ -23,6 +23,7 @@
                 <tr>
                     <th>Series Name</th>
                     <th>Year Released</th>
+                    <th>Series Type</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>

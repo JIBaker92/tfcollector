@@ -15,14 +15,12 @@ class CharactersTable extends Migration
     {
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('title_id');
-            $table->foreign('title_id')->references('id')->on('series');
+            $table->string('title');
+            $table->string('name');
             $table->string('description');
-            $table->unsignedBigInteger('class_id');
-            $table->foreign('class_id')->references('id')->on('class');
+            $table->string('class');
             $table->string('picture_link')->nullable(true);
-            $table->unsignedBigInteger('faction_id');
-            $table->foreign('faction_id')->references('id')->on('faction');
+            $table->string('faction');
             $table->dateTime('updated_at');
             $table->dateTime('created_at');
         });

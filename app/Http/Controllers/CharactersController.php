@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Character;
 
 class CharactersController extends Controller
 {
@@ -13,7 +14,8 @@ class CharactersController extends Controller
      */
     public function index()
     {
-        return view('characters');
+        $characters = Character::all()->toArray();
+        return view('characters', compact ('characters'));
     }
 
     /**
@@ -34,7 +36,22 @@ class CharactersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'name' => 'required',
+            'description' => 'required',
+            'faction' => 'required',
+
+        ]);
+            $characters = new Character([
+                'title' => $request->get('title'),
+                'name' => $request->get('name'),
+                'description' => $request->get('description'),
+                'class' => $request->get('class'),
+                'faction' => $request->get('faction'),
+            ]);
+            $characters->save();
+            return redirect()->route('CreateCharacters')->with('success','Character was successfully added');
     }
 
     /**

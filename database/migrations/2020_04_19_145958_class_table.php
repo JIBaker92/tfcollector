@@ -13,7 +13,7 @@ class ClassTable extends Migration
      */
     public function up()
     {
-        Schema::create('class', function (Blueprint $table) {
+        Schema::create('classifications', function (Blueprint $table) {
             $table->id();
             $table->string('class_name');
             $table->dateTime('updated_at');
