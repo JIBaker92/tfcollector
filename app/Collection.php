@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Collection extends Model
 {
     protected $fillable = [
-        'title', 'name', 'condition', 'class', 'price', 'bought'
+        'title', 'name', 'condition', 'class', 'price', 'bought_year', 'userID'
     ];
 }

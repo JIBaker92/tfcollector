@@ -14,6 +14,61 @@
         
     </head>
     <body>
-        <p>test</p>
+    <div class="row">
+            <div class="col-md-12">
+                <br />
+                <h3 aling="center">Add Figure</h3>
+                <br />
+                @if(count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+                @if(\Session::has('success'))
+                <div class="alert alert-success">
+                    <p>{{\Session::get('success')}}</p>
+                </div>
+                @endif
+
+                <form method="post" action="{{url('collection')}}">
+                    {{csrf_field()}}
+                    <div class="form-group">
+                        <div class="data-ins">
+                        <input type="text" name="title"
+                        class="form-control" placeholder="Enter Series Name" />
+                        </div>
+                        <div class="data-ins">
+                        <input type="text" name="name"
+                        class="form-control" placeholder="Enter Figure Name" />
+                        </div>
+                        <div class="data-ins">
+                        <input type="text" name="condition"
+                        class="form-control" placeholder="Enter Figure Condition" />
+                        </div>
+                        <div class="data-ins">
+                        <input type="text" name="class"
+                        class="form-control" placeholder="Enter Figure Class" />
+                        </div>
+                        <div class="data-ins">
+                        <input type="text" name="price"
+                        class="form-control" placeholder="Enter Figure Price" />
+                        </div>
+                        <div class="data-ins">
+                        <input type="text" name="bought_year"
+                        class="form-control" placeholder="Enter Year Bought" />
+                        </div>
+                        
+                        <div class="button">
+                                <input type="submit" class="btn btn-primary" />
+                            </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </body>
     @endsection

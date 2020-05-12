@@ -19,6 +19,30 @@
             <a href="/collection/create">Want to add a new character to your collection?</a>
             <br />
             <br />
+            <table class="table table-bordered">
+                <tr>
+                    <th>Series Name</th>
+                    <th>Character Name</th>
+                    <th>Figure Condition</th>
+                    <th>Class Type</th>
+                    <th>Price</th>
+                    <th>Year Purchased</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                @foreach($collection as $row)
+                <tr>
+                    <td>{{$row['title']}}</td>
+                    <td>{{$row['name']}}</td>
+                    <td>{{$row['condition']}}</td>
+                    <td>{{$row['class']}}</td>
+                    <td>{{$row['price']}}</td>
+                    <td>{{$row['bought_year']}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                @endforeach
+            </table>
         </div>
     </body>
 @endsection
