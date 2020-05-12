@@ -43,7 +43,7 @@ class ClassificationController extends Controller
                 'class_name' => $request->get('class_name')
             ]);
             $classification->save();
-            return redirect()->route('createclassification')->with('success','Class was successfully added');
+            return redirect()->route('CreateClassification')->with('success','Class was successfully added');
     }
 
     /**

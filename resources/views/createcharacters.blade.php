@@ -38,8 +38,14 @@
                     {{csrf_field()}}
                     <div class="form-group">
                         <div class="series-title">
-                        <input type="text" name="title"
-                        class="form-control" placeholder="Enter character series" />
+                        <select name="title">
+                    @if($series->isEmpty())
+                    <option value="">No series have been added.</option>
+                    @endif
+                    @foreach($series as $s)
+                            <option value= "{{$s['title']}}"> {{$s['title']}}</option>
+                    @endforeach
+                        </select>
                         </div>
                         <div class="character-name">
                         <input type="text" name="name"
@@ -50,12 +56,24 @@
                                 class="form-control" placeholder="Enter character bio" />
                             </div>
                             <div class="class-name">
-                                    <input type="text" name="class"
-                                    class="form-control" placeholder="Enter class type" />
+                            <select name="class">
+                    @if($class->isEmpty())
+                    <option value="">No classes have been added.</option>
+                    @endif
+                    @foreach($class as $c)
+                            <option value="{{$c['class_name']}}"> {{$c['class_name']}}</option>
+                    @endforeach
+                            </select>
                                 </div>
                                 <div class="faction-name">
-                                    <input type="text" name="faction"
-                                    class="form-control" placeholder="Enter faction" />
+                                <select name="faction">
+                    @if($faction->isEmpty())
+                    <option value="0">No factions have been added.</option>
+                    @endif
+                    @foreach($faction as $f)
+                             <option value="{{$f['faction_name']}}"> {{$f['faction_name']}}</option>
+                    @endforeach
+                                </select>
                                 </div>
                                     <div class="button">
                                         <input type="submit" class="btn btn-primary" />

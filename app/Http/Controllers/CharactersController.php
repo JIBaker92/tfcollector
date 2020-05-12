@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Character;
+use App\Series;
+use App\Faction;
+use App\Classification;
 
 class CharactersController extends Controller
 {
@@ -25,7 +28,11 @@ class CharactersController extends Controller
      */
     public function create()
     {
-        return view('createcharacters');
+        $data['series'] = Series::select('title')->get();
+        $data['class'] = Classification::select('class_name')->get();
+        $data['faction'] = Faction::select('faction_name')->get();
+
+        return view('createcharacters', $data);
     }
 
     /**
