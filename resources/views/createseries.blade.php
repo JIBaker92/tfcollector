@@ -37,15 +37,15 @@
                 <form method="post" action="{{url('series')}}">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <div class="series-title">
+                        <div class="data-ins">
                         <input type="text" name="title"
                         class="form-control" placeholder="Enter Series Name" />
                         </div>
-                            <div class="series-year">
+                            <div class="data-ins">
                                 <input type="text" name="year"
                                 class="form-control" placeholder="Enter Series Release Year" />
                             </div>
-                                <div class="series-type">
+                                <div class="data-ins">
                                     <input type="text" name="type"
                                     class="form-control" placeholder="Enter Series type" />
                                 </div>

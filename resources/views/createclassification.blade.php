@@ -37,7 +37,7 @@
                 <form method="post" action="{{url('classification')}}">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <div class="class-name">
+                        <div class="data-ins">
                         <input type="text" name="class_name"
                         class="form-control" placeholder="Enter Class Name" />
                         </div>

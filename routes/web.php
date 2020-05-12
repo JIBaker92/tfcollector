@@ -32,6 +32,9 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('faction', 'FactionController');
     Route::get('/faction', 'FactionController@index')->name('CreateFaction');
     Route::post('/faction', 'FactionController@store')->name('StoreFaction');
+    Route::resource('collection', 'CollectionController');
+    Route::get('/collection', 'CollectionController@index')->name('MyCollection');
+    Route::post('/collection', 'CollectionController@store')->name('StoreCollection');
     Route::get('/home', 'HomeController@index')->name('home');
 
 });

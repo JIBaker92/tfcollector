@@ -79,15 +79,7 @@ body {
   outline: 0 !important;
 }
 
-.series-title{
-  padding-bottom: 10px;
-}
-
-.series-year{
-  padding-bottom: 10px;
-}
-
-.series-type{
+.data-ins{
   padding-bottom: 10px;
 }
 

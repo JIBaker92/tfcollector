@@ -37,7 +37,7 @@
                 <form method="post" action="{{url('characters')}}">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <div class="series-title">
+                        <div class="data-ins">
                         <select name="title">
                     @if($series->isEmpty())
                     <option value="">No series have been added.</option>
@@ -47,15 +47,15 @@
                     @endforeach
                         </select>
                         </div>
-                        <div class="character-name">
+                        <div class="data-ins">
                         <input type="text" name="name"
                         class="form-control" placeholder="Enter character name" />
                         </div>
-                            <div class="character-desc">
+                            <div class="data-ins">
                                 <input type="text" name="description"
                                 class="form-control" placeholder="Enter character bio" />
                             </div>
-                            <div class="class-name">
+                            <div class="data-ins">
                             <select name="class">
                     @if($class->isEmpty())
                     <option value="">No classes have been added.</option>
@@ -65,7 +65,7 @@
                     @endforeach
                             </select>
                                 </div>
-                                <div class="faction-name">
+                                <div class="data-ins">
                                 <select name="faction">
                     @if($faction->isEmpty())
                     <option value="0">No factions have been added.</option>

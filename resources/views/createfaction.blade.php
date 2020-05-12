@@ -37,7 +37,7 @@
                 <form method="post" action="{{url('faction')}}">
                     {{csrf_field()}}
                     <div class="form-group">
-                            <div class="faction-name">
+                            <div class="data-ins">
                             <input type="text" name="faction_name"
                             class="form-control" placeholder="Enter Faction Name" />
                         </div>

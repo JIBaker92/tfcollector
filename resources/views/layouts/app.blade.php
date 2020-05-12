@@ -32,6 +32,10 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+                            </li>
                     <li class="nav-item">
                                 <a class="nav-link" href="{{ route('StoreSeries') }}">{{ __('Series') }}</a>
                             </li>
@@ -43,6 +47,9 @@
                             </li>
                     <li class="nav-item">
                                 <a class="nav-link" href="{{ route('CreateFaction') }}">{{ __('Faction') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('MyCollection') }}">{{ __('My Collection') }}</a>
                             </li>
 
                     </ul>
