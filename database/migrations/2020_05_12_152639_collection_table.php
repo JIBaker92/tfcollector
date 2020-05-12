@@ -13,14 +13,15 @@ class CollectionTable extends Migration
      */
     public function up()
     {
-        Schema::create('characters', function (Blueprint $table) {
+        Schema::create('collection', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('name');
-            $table->string('description');
+            $table->string('condition');
             $table->string('class');
             $table->string('picture_link')->nullable(true);
-            $table->string('faction');
+            $table->integer('price');
+            $table->interger('bought_year');
             $table->dateTime('updated_at');
             $table->dateTime('created_at');
         });

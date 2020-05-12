@@ -16,31 +16,9 @@
     <body>
             <div class="content">
             <p>Here is your current collection.</p>
-            <a href="/characters">Want to add a new character to your collection?</a>
+            <a href="/collection/create">Want to add a new character to your collection?</a>
             <br />
             <br />
-            <table class="table table-bordered">
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                @foreach($collection as $row)
-                <tr>
-                    <td>{{$row['']}}</td>
-                    <td>{{$row['']}}</td>
-                    <td>{{$row[''']}}</td>
-                    <td>{{$row['']}}</td>
-                    <td>{{$row['']}}</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                @endforeach
-            </table>
         </div>
     </body>
 @endsection

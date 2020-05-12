@@ -49,7 +49,7 @@
                                 <a class="nav-link" href="{{ route('CreateFaction') }}">{{ __('Faction') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('MyCollection') }}">{{ __('My Collection') }}</a>
+                                <a class="nav-link" href="{{ route('CreateCollection') }}">{{ __('My Collection') }}</a>
                             </li>
 
                     </ul>

@@ -14,5 +14,6 @@
         
     </head>
     <body>
+        <p>test</p>
     </body>
     @endsection
