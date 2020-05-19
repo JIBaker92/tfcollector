@@ -17,7 +17,7 @@
     <div class="row">
             <div class="col-md-12">
                 <br />
-                <h3 aling="center">Add Figure</h3>
+                <h3 aling="center">Add A Figure To Your Collection</h3>
                 <br />
                 @if(count($errors) > 0)
                 <div class="alert alert-danger">
@@ -61,7 +61,6 @@
                         <input type="text" name="bought_year"
                         class="form-control" placeholder="Enter Year Bought" />
                         </div>
-                        
                         <div class="button">
                                 <input type="submit" class="btn btn-primary" />
                             </div>

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Collection;
 use Illuminate\Http\Request;
+use App\Collection;
 use App\Character;
 use App\Series;
 use App\Classification;
@@ -17,7 +17,7 @@ class CollectionController extends Controller
      */
     public function index()
     {
-        $collection = Collection::all()->toArray();
+        $collection = Collection::where('userID', auth()->user()->id)->get()->toArray();
         return view('collection', compact ('collection'));
     }
 
@@ -28,10 +28,6 @@ class CollectionController extends Controller
      */
     public function create()
     {
-        $data['series'] = Series::select('title')->get();
-        $data['name'] = Character::select('name')->get();
-        $data['class'] = Classification::select('class_name')->get();
-
         return view('createcollection');
     }
 
@@ -43,7 +39,7 @@ class CollectionController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             'title' => 'required',
             'name' => 'required',
             'condition' => 'required',
@@ -51,6 +47,7 @@ class CollectionController extends Controller
             'price' => 'required',
             'bought_year' => 'required',
         ]);
+        
         $collection = new Collection([
             'title' => $request->get('title'),
             'name' => $request->get('name'),
@@ -58,6 +55,7 @@ class CollectionController extends Controller
             'class' => $request->get('class'),
             'price' => $request->get('price'),
             'bought_year' => $request->get('bought_year'),
+            'userID' => auth()->user()->id
         ]);
         $collection->save();
         return redirect()->route('CreateCollection')->with('success','Collection was successfully added');
