@@ -5,7 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Welcome</div>
+                <p>Welcome to tf collector, please feel free to view or check series, characters, figure classes, factions and your collection.</p>
 
                 <div class="card-body">
                     @if (session('status'))

@@ -19,22 +19,22 @@
                 <br />
                 <h3 aling="center">Add A Figure To Your Collection</h3>
                 <br />
-                @if(count($errors) > 0)
+                @if(count($errors) > 0) <!-- if $array has a value execute below code -->
                 <div class="alert alert-danger">
                     <ul>
-                        @foreach($errors->all() as $error)
-                            <li>{{$error}}</li>
+                        @foreach($errors->all() as $error) <!-- if there is an error display error -->
+                            <li>{{$error}}</li> <!-- show validation error -->
                         @endforeach
                     </ul>
                 </div>
                 @endif
-                @if(\Session::has('success'))
+                @if(\Session::has('success')) <!-- execute success method (in this case go to correct page and display records) -->
                 <div class="alert alert-success">
                     <p>{{\Session::get('success')}}</p>
                 </div>
                 @endif
 
-                <form method="post" action="{{url('collection')}}">
+                <form method="post" action="{{url('collection')}}"> <!-- creates a post method where data entry is possible -->
                     {{csrf_field()}}
                     <div class="form-group">
                         <div class="data-ins">

@@ -27,8 +27,8 @@
                     <th>Class Type</th>
                     <th>Price</th>
                     <th>Year Purchased</th>
-                    <th></th>
-                    <th></th>
+                    <th>Edit</th>
+                    <th>Remove</th>
                 </tr>
                 @foreach($collection as $row)
                 <tr>
@@ -38,7 +38,8 @@
                     <td>{{$row['class']}}</td>
                     <td>{{$row['price']}}</td>
                     <td>{{$row['bought_year']}}</td>
-                    <td></td>
+                    <td><a href="{{}action('CollectionController@edit',
+                                  $row['collection'])}">Edit</a></td>
                     <td></td>
                 </tr>
                 @endforeach
