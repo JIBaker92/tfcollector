@@ -59,7 +59,7 @@ class CollectionController extends Controller
             'userID'        => auth()->user()->id
         ]);
         $collection->save();    //insert record into sql table
-        return redirect()->route('createCollection')->with('success','Collection was successfully added');
+        return redirect()->route('CreateCollection')->with('success','Collection was successfully added');
         //above line will redirect to My Collection page if successful at adding record
     }
 
@@ -82,8 +82,6 @@ class CollectionController extends Controller
      */
     public function edit(Collection $collection)
     {
-        $collection = Collection::find($collection); //fetch specific record from $variable
-        return view('EditCollection');
     }
 
     /**
